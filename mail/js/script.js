@@ -21,15 +21,16 @@
 function myFunction() {
     var mailList = ["martamodonesi@gmail.com", "biagiomoro85@gmail.com", "gaiavittoria.milanese@gmail.com", "lofarosalvatoreemanuele@gmail.com"];
     var mailRequest = document.getElementById("mail").value;
-    var submit = 0;
+    var submit = false;
     for (i = 0; i < mailList.length; i++) {
         if (mailRequest == mailList[i]) {
-            submit = 1;
-            alert("Accedi");
+            submit = true;
         } 
     }
     
-    if (submit == 0) {
-        alert("Register");
+    if (submit) {
+        alert("Accedi");
+    } else {
+        alert("Registrati");
     }
 }
